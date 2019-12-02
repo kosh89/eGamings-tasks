@@ -16,4 +16,4 @@ const reverseWordsInSentence = function (str) {
 };
 
 console.log(reverseWordsInSentence('Абв где, ёжз!'));
-console.log(reverseWordsInSentence('Abc def, ghi!'));
+console.log(reverseWordsInSentence('Abc def, ghi...'));
