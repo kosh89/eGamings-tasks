@@ -16,8 +16,12 @@
       str.toLowerCase().split(' ').forEach(function (el) {
         const newArr = [];
 
-        el.split('').forEach(function (letter, index) {
-          letter.match(template) ? newArr.unshift(letter) : newArr[index] = letter;
+        el.split('').forEach(function (letter, index, str) {
+          if (letter.match(template) || str[index + 1] && str[index+1].match(template)) {
+            newArr.unshift(letter);
+          } else {
+            newArr[index] = letter;
+          }
         });
 
         newStr = newStr + ' ' + newArr.join('');
@@ -39,3 +43,6 @@
     }
   }
 })();
+
+// a-b
+//a
