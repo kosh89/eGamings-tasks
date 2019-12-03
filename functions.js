@@ -31,18 +31,23 @@
     },
 
     sumOfMultipleNumbers: function (num) {
-      let sum = 0;
+      let sum3 = 0;
+      let sum5 = 0;
+      let sum35 = 0;
 
-      for (let i = 1; i < num; i++) {
-        if (i % 3 === 0 || i % 5 === 0) {
-          sum += i;
-        }
+      for (let i = 3; i < num; i += 3) {
+        sum3 += i;
       }
 
-      return sum;
+      for (let i = 5; i < num; i += 5) {
+        sum5 += i;
+      }
+
+      for (let i = 15; i < num; i += 15) {
+        sum35 += i;
+      }
+
+      return sum3 + sum5 - sum35;
     }
   }
 })();
-
-// a-b
-//a
